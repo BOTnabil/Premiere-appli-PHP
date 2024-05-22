@@ -8,8 +8,15 @@
         $qtt = filter_input(INPUT_POST, "qtt", FILTER_VALIDATE_INT);
 
         if($name && $price && $qtt){
-
             
+            $product = [
+                "name" => $name,
+                "price" => $price,
+                "qtt" => $qtt,
+                "total" => $price*$qtt
+            ];
+            
+            $_SESSION['products'][] = $product
         }
 
     }
