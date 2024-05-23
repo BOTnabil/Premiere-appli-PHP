@@ -16,7 +16,7 @@
                 "total" => $price*$qtt
             ];
             
-            $_SESSION['products'][] = $product
+            $_SESSION['products'][] = $product;
         }
 
     }
