@@ -45,12 +45,14 @@
         </form>
         <?php 
             $totalQtt = 0;
-            foreach($_SESSION['products'] as $index => $product){
-                $totalQtt += $product['qtt'];
+            if(isset($_SESSION['products'])){
+                foreach($_SESSION['products'] as $index => $product){
+                    $totalQtt += $product['qtt'];
+                }
             }
             echo "Quantité totale d'articles : $totalQtt<br>"; 
 
-           echo $_SESSION['MAJ'];
+           echo $_SESSION['MAJindex'];
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
